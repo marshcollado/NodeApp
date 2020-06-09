@@ -9,12 +9,10 @@ node {
 
 	
   stage("build"){
-      steps{
         sh script:'''
           #!/bin/bash
 	  docker build . -t anandr72/nodeapp
         '''
-      }
     }	
 	
     stage('Build image') {
