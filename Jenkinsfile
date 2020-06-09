@@ -7,6 +7,16 @@ node {
         checkout scm
     }
 
+	
+  stage("build"){
+      steps{
+        sh script:'''
+          #!/bin/bash
+	  docker build . -t anandr72/nodeapp
+        '''
+      }
+    }	
+	
     stage('Build image') {
         /* This builds the actual image */
 
